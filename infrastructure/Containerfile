@@ -1,4 +1,4 @@
-FROM docker.io/maven:3.9.9-eclipse-temurin-11-alpine
+FROM docker.io/maven:3.9.14-eclipse-temurin-11-alpine
 
 MAINTAINER Christoph Kappel <christophl@unexist.dev>
 
