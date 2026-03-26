@@ -8,3 +8,5 @@ This project holds an example for AsciiDoxy.
 - https://doxygen.nl
 - https://www.doxygen.nl/manual/docblocks.html
 - https://micro-os-plus.github.io/develop/doxygen-style-guide/
+- https://github.com/Anvil/bash-doxygen
+- https://github.com/unexist/asciidoxy
