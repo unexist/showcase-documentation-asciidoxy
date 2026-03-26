@@ -5,7 +5,7 @@ FILE_PATTERNS     = *.c *.h *.sh
 
 # Special handling for shellscripts
 #EXTENSION_MAPPING = no_extension=C¬
-EXTENSION_MAPPING = sh=C¬
+EXTENSION_MAPPING = sh=C
 FILTER_PATTERNS   = *.sh=doxygen/filter/doxygen-bash.sed
 
 # Generators
