@@ -13,6 +13,9 @@ VERSION := 0.3
 		exit 1; \
 	fi
 
+filter:
+	sed -n -f doxygen/filter/doxygen-bash.sed doxygen/filter/doxygen-bash.sed src/build.sh | grep .
+
 doxygen: --check-podman
 	podman run --rm -v $(CURDIR):$(MOUNTPATH) \
 		-it docker.io/unexist/asciidoxy-builder:$(VERSION) \
