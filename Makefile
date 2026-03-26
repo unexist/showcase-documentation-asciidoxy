@@ -14,7 +14,7 @@ VERSION := 0.3
 	fi
 
 filter:
-	sed -n -f doxygen/filter/doxygen-bash.sed doxygen/filter/doxygen-bash.sed src/build.sh | grep .
+	sed -n -f doxygen/filter/doxygen-bash.sed src/build.sh | grep .
 
 doxygen: --check-podman
 	podman run --rm -v $(CURDIR):$(MOUNTPATH) \
