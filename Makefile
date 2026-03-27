@@ -14,7 +14,7 @@ VERSION := 0.3
 	fi
 
 filter:
-	sed -n -f doxygen/filter/doxygen-bash.sed src/build.sh | grep .
+	doxygen/filter/doxygen-bash.sed src/build.sh | grep .
 
 doxygen: --check-podman
 	podman run --rm -v $(CURDIR):$(MOUNTPATH) \
@@ -50,11 +50,11 @@ asciidoc-local: --check-mvn
 publish: --check-podman --guard-CONFLUENCE_URL --guard-CONFLUENCE_SPACE_KEY --guard-CONFLUENCE_ANCESTOR_ID --guard-CONFLUENCE_USER --guard-CONFLUENCE_TOKEN
 	podman run --rm --dns 8.8.8.8 -v $(CURDIR):$(MOUNTPATH) \
 		-it docker.io/unexist/asciidoxy-builder:$(VERSION) \
-        -e CONFLUENCE_URL \
-        -e CONFLUENCE_SPACE_KEY \
-        -e CONFLUENCE_ANCESTOR_ID \
-        -e CONFLUENCE_USER \
-        -e CONFLUENCE_TOKEN \
+		-e CONFLUENCE_URL \
+		-e CONFLUENCE_SPACE_KEY \
+		-e CONFLUENCE_ANCESTOR_ID \
+		-e CONFLUENCE_USER \
+		-e CONFLUENCE_TOKEN \
 		sh -c "cd $(MOUNTPATH) && mvn -f pom.xml -P generate-docs-and-publish generate-resources"
 
 versions:
