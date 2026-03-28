@@ -2,6 +2,7 @@
  * @package showcase-asciidoxy
  *
  * @file hello.c
+ * @namespace showcase_asciidoxy
  * @copyright 2024-present Christoph Kappel <christoph@unexist.dev>
  * @version $Id$
  *
