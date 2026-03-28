@@ -1,9 +1,8 @@
 #!/bin/zsh
 
-## @package showcase-asciidoxy
+## @package showcase_asciidoxy
 ##
 ## @file build.sh
-## @namespace showcase_asciidoxy
 ## @copyright 2026-present Christoph Kappel <christoph@unexist.dev>
 ## @version $Id$
 ##

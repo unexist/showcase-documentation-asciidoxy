@@ -1,8 +1,7 @@
 /**
- * @package showcase-asciidoxy
+ * @package showcase_asciidoxy
  *
  * @file lang.h
- * @namespace showcase_asciidoxy
  * @copyright 2024-present Christoph Kappel <christoph@unexist.dev>
  * @version $Id$
  *
