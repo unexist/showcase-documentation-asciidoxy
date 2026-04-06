@@ -9,6 +9,15 @@ and {3}[AsciiDoc].
 
 ${language("cpp")}
 
+== Build
+
+##${insert("CC", leveloffset=2)}
+##${insert("BIN_NAME", leveloffset=2)}
+
+##${insert("wildcard", leveloffset=2)}
+##${insert("compile", leveloffset=2)}
+${insert("compile", ignore_global_filter=True, leveloffset=2)}
+
 == Functions
 
 ${insert("get_lang", allow_overloads=True)}
