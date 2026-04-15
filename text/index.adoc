@@ -7,16 +7,19 @@
 This is an example documentation which demonstrates the combination of {1}[Doxygen], {2}[AsciiDoxy]
 and {3}[AsciiDoc].
 
-${language("cpp")}
+##${language("cpp")}
 
 == Build
 
-##${insert("CC", leveloffset=2)}
-##${insert("BIN_NAME", leveloffset=2)}
+=== Variables
 
-##${insert("wildcard", leveloffset=2)}
-##${insert("compile", leveloffset=2)}
-${insert("compile", ignore_global_filter=True, leveloffset=2)}
+${insert("CC", leveloffset=2, template="shellvariable")}
+${insert("BIN_NAME", leveloffset=2, template="shellvariable")}
+
+=== Helper functions
+
+${insert("wildcard", leveloffset=2, template="shellfunc")}
+${insert("compile", leveloffset=2, template="shellfunc")}
 
 == Functions
 
