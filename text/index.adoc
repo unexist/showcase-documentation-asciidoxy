@@ -13,17 +13,17 @@ and {3}[AsciiDoc].
 
 === Variables
 
-${insert("CC", leveloffset=2, template="shellvariable")}
-${insert("BIN_NAME", leveloffset=2, template="shellvariable")}
+${insert("CC", leveloffset=3, template="shellvariable")}
+${insert("BIN_NAME", leveloffset=3, template="shellvariable")}
 
 === Helper functions
 
-${insert("wildcard", leveloffset=2, template="shellfunc")}
-${insert("compile", leveloffset=2, template="shellfunc")}
+${insert("wildcard", leveloffset=3, template="shellfunc")}
+${insert("compile", leveloffset=3, template="shellfunc")}
 
 == Functions
 
-${insert("get_lang", allow_overloads=True)}
+${insert("get_lang", leveloffset=2, allow_overloads=True)}
 ##${insert("main", leveloffset=2)}
 ${insert("main", leveloffset=2, template="customfunc")}
 
