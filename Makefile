@@ -1,5 +1,5 @@
 MOUNTPATH := /asciidoxy
-VERSION := 0.3
+VERSION := 0.4
 
 --check-%:
 	@if [ "`command -v ${*}`" = "" ]; then \
