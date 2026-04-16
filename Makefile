@@ -21,6 +21,12 @@ doxygen: --check-podman
 		-it docker.io/unexist/asciidoxy-builder:$(VERSION) \
 		sh -c "cd $(MOUNTPATH) && doxygen"
 
+doxygen-fix-shellscripts:
+	sed -i -e 's/location file="\([^"]*\)"/location file="\1.c"/g' doxygen/xml/*
+	sed -i -e 's/bodyfile="\([^"]*\)"/bodyfile="\1.c"/g' doxygen/xml/*
+	sed -i -e 's/kind="file"><name>\([^<]*\)/kind="file"><name>\1.c/g' doxygen/xml/*
+	sed -i -e 's/<compoundname>\([^<]*\)/<compoundname>\1.c/g' doxygen/xml/*
+
 doxygen-generate: --check-podman
 	podman run --rm -v $(CURDIR):$(MOUNTPATH) \
 		-it docker.io/unexist/asciidoxy-builder:$(VERSION) \
