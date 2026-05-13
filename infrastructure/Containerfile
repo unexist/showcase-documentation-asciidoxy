@@ -2,10 +2,18 @@ FROM docker.io/maven:3.9.14-eclipse-temurin-11-alpine
 
 MAINTAINER Christoph Kappel <christophl@unexist.dev>
 
-RUN apk add --no-cache ruby doxygen python3 py3-pip plantuml git make
+RUN apk add --no-cache ruby doxygen python3 py3-pip py3-mako py3-mako-pyc plantuml git make
 RUN gem install asciidoctor asciidoctor-rouge asciidoctor-diagram asciidoctor-multipage
 
-#RUN pip3 install asciidoxy --break-system-packages
+# Overwrite possible outdated plantuml version
+RUN curl -L https://github.com/plantuml/plantuml/releases/download/v1.2026.3/plantuml-gplv2-1.2026.3.jar \
+    -o /usr/share/java/plantuml.jar
+
+# Forcefully install mako
+RUN pip install --break-system-package --force mako
+
+# Prefer patched version
+# RUN pip3 install asciidoxy --break-system-packages
 RUN git clone https://github.com/unexist/asciidoxy.git \
     && cd asciidoxy \
-    && make install
+    && make container-install
