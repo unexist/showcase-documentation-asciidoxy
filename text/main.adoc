@@ -1,0 +1,9 @@
+== Functions
+
+${insert("get_lang", leveloffset=2, allow_overloads=True)}
+##${insert("main", leveloffset=2)}
+${insert("main", leveloffset=2, template="customfunc")}
+
+== Structs
+
+${insert("Language", leveloffset=2)}

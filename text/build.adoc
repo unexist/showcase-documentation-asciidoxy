@@ -1,0 +1,9 @@
+=== Variables
+
+${insert("CC", leveloffset=3, template="shellvariable")}
+${insert("BIN_NAME", leveloffset=3, template="shellvariable")}
+
+=== Helper functions
+
+${insert("wildcard", leveloffset=3, template="shellfunc")}
+${insert("compile", leveloffset=3, template="shellfunc")}

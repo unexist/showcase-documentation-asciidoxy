@@ -11,22 +11,9 @@ and {3}[AsciiDoc].
 
 == Build
 
-=== Variables
+${include("build.adoc", leveloffset=2)}
 
-${insert("CC", leveloffset=3, template="shellvariable")}
-${insert("BIN_NAME", leveloffset=3, template="shellvariable")}
+== Main
 
-=== Helper functions
+${include("build.adoc", leveloffset=2)}
 
-${insert("wildcard", leveloffset=3, template="shellfunc")}
-${insert("compile", leveloffset=3, template="shellfunc")}
-
-== Functions
-
-${insert("get_lang", leveloffset=2, allow_overloads=True)}
-##${insert("main", leveloffset=2)}
-${insert("main", leveloffset=2, template="customfunc")}
-
-== Structs
-
-${insert("Language", leveloffset=2)}
